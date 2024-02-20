@@ -1,0 +1,45 @@
+@extends('layouts.admin')
+@section('content')
+    <main>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Thêm khóa học</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">ADD</li>
+            </ol>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="form-group mb-3">
+                    <label for="name">Name:</label>
+                    <input type="name" class="form-control" placeholder="Enter name" name="name" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label>Price:</label>
+                    <input type="price" class="form-control" placeholder="Enter price" name="price" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label>Thumbnail:</label>
+                    <input type="file" class="form-control" name="thumbnail" />
+                </div>
+                <div class="form-group mb-3">
+                    <label>Description:</label>
+                    <textarea class="form-control" name="description" id="" cols="30" rows="3"></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Status:</label>
+                    <select class="form-control" name="status">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label>IDCate:</label>
+                    <select class="form-control" name="idcate">
+                        @foreach ($category as $item)
+                            <option value="{{ $item['id'] }}">{{ $item['name'] }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </main>
+@endsection

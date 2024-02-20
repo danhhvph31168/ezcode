@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../BTVN"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ezcode"
+	}
+}

@@ -1,0 +1,12 @@
+{
+    "name": "dell/codephp",
+    "autoload": {
+        "psr-4": {
+            "Dell\\Codephp\\": "src/"
+        }
+    },
+    "require": {
+        "bramus/router": "~1.6",
+        "eftec/bladeone": "^4.9"
+    }
+}
